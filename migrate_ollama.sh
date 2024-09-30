@@ -8,7 +8,7 @@ command_exists() {
 }
 
 # Check for required commands
-for cmd in docker sudo; do
+for cmd in snap docker sudo; do
     if ! command_exists "$cmd"; then
         echo "Error: $cmd is required but not installed. Please install it and try again."
         exit 1
